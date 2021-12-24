@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Item</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/styles/styles.css" />
+    <style>
+      body {
+        background-color: #1a1a1d;
+        background-color: #c3073f;
+        color: black;
+      }
+      form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      form input,
+      button {
+        margin-top: 10px;
+        width: 250px;
+        height: 35px;
+        color: black;
+        border: solid 2px grey;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        width: 70px;
+      }
+      .brandLogo {
+        font-family: "Baloo 2", cursive;
+        font-size: 50px;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include('./partials/navbar.ejs') %>
+    <form action="/new-item" method="post">
+      <label for="itle" class="brandLogo">hassly</label>
+      <input
+        type="text"
+        name="title"
+        placeholder="Title (simplified)"
+        required
+      />
+      <input
+        type="text"
+        name="description"
+        placeholder="Description"
+        required
+      />
+      <input type="text" name="brand" placeholder="Brand" required />
+      <input type="text" name="price" placeholder="Price" required />
+      <input type="text" name="shipping" placeholder="Shipping" required />
+      <input type="text" name="imageUrl" placeholder="Image url" required />
+      <input type="text" name="condition" placeholder="Condition" required />
+      <input
+        type="text"
+        name="tags"
+        placeholder="Categories (space seperated)"
+        required
+      />
+      <input type="text" name="seller" placeholder="Seller" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../public/assets/scripts/style.js"></script>
+    <script type="module" src="../public/assets/scripts/home.js"></script>
+  </body>
+</html>

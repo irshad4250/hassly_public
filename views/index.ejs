@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hassly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/styles/styles.css" />
+  </head>
+  <body>
+    <%- include('./partials/navbar.ejs')%>
+
+    <div class="latestBlock" id="latest">
+      <div class="latestLabel">Latest Items</div>
+      <div class="showings">
+        <% for( let i = 0; i < latest.length; i++ ) { %>
+        <div class="itemBox">
+          <a href="view/<%= latest[i]._id %> ">
+            <div class="itemBoxFlex">
+              <div
+                class="itemBoxPicture"
+                style="background-image: url('<%=latest[i].imageUrl%>')"
+              ></div>
+              <div class="itemBoxTitle"><%= latest[i].title %></div>
+              <div class="itemBoxPrice">$<%= latest[i].price %></div>
+            </div>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="latestBlock" id="clothing">
+      <div class="latestLabel">Clothing</div>
+      <div class="showings">
+        <% for( let i = 0; i < clothing.length; i++ ) { %>
+        <div class="itemBox">
+          <a href="view/<%= clothing[i]._id %> ">
+            <div class="itemBoxFlex">
+              <div
+                class="itemBoxPicture"
+                style="background-image: url('<%=clothing[i].imageUrl%>')"
+              ></div>
+              <div class="itemBoxTitle"><%= clothing[i].title %></div>
+              <div class="itemBoxPrice">$<%= clothing[i].price %></div>
+            </div>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="latestBlock" id="electronics">
+      <div class="latestLabel">Electronics</div>
+      <div class="showings">
+        <% for( let i = 0; i < electronics.length; i++ ) { %>
+        <div class="itemBox">
+          <a href="view/<%= electronics[i]._id %> ">
+            <div class="itemBoxFlex">
+              <div
+                class="itemBoxPicture"
+                style="background-image: url('<%=electronics[i].imageUrl%>')"
+              ></div>
+              <div class="itemBoxTitle"><%= electronics[i].title %></div>
+              <div class="itemBoxPrice">$<%= electronics[i].price %></div>
+            </div>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="latestBlock" id="kitchen">
+      <div class="latestLabel">Kitchen</div>
+      <div class="showings">
+        <% for( let i = 0; i < kitchen.length; i++ ) { %>
+        <div class="itemBox">
+          <a href="view/<%= kitchen[i]._id %> ">
+            <div class="itemBoxFlex">
+              <div
+                class="itemBoxPicture"
+                style="background-image: url('<%=kitchen[i].imageUrl%>')"
+              ></div>
+              <div class="itemBoxTitle"><%= kitchen[i].title %></div>
+              <div class="itemBoxPrice">$<%= kitchen[i].price %></div>
+            </div>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../public/assets/scripts/style.js"></script>
+    <script type="module" src="../public/assets/scripts/home.js"></script>
+  </body>
+</html>

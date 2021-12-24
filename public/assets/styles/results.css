@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+.searchResultBox {
+  width: 50%;
+  height: 200px;
+  background-color: var(--latestBlock-background);
+  margin: auto;
+  margin-top: 8px;
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: 200ms ease-out;
+  color: whitesmoke;
+}
+
+.searchResultBox:hover {
+  opacity: 0.7;
+}
+
+.searchResultImage {
+  background-color: white;
+  height: 170px;
+  width: 170px;
+  border-radius: 8px;
+  background-image: url("https://i.ebayimg.com/images/g/KLMAAOSwpbFhQtkr/s-l225.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.searchResultDescriptionBox {
+  width: 65%;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchResultTitle {
+  overflow: hidden;
+  font-size: 20px;
+  margin-bottom: 5px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchResultDes {
+  overflow-y: auto;
+  height: 95px;
+}
+.resultPricingAndShippingBox {
+  /* background-color: aliceblue; */
+  height: 29px;
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.filterInfoBox {
+  padding: 5px;
+  background-color: var(--latestBlock-background);
+  width: 50%;
+  height: 50px;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 950px) {
+  .searchResultBox {
+    border-radius: 0;
+    width: 100%;
+  }
+  .filterInfoBox {
+    border-radius: 0;
+    width: 100%;
+  }
+}

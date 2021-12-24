@@ -1,0 +1,488 @@
+:root {
+  --logo-fontFamily: "Baloo 2", cursive;
+  --navBar-fontFamily: "Questrial", sans-serif;
+  --suggested-Background: #c3073f;
+  --scrollBar-color: grey;
+  --body-background: #1a1a1d;
+  /* --body-background: #950740; */
+  --oldNavBar-background: #950740;
+  --navbar-color: #c3073f;
+  --latestBlock-background: #4e4e50;
+  --showings-background: #4e4e50;
+  --secondary-color: #4e4e50;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--navBar-fontFamily);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--body-background);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  background-color: var(--navbar-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(236, 236, 236);
+  z-index: 10000;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+}
+
+nav > ul {
+  width: 40%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+nav li {
+  cursor: pointer;
+  transition: 100ms ease-in-out;
+  font-family: var(--navBar-fontFamily);
+  font-size: 17px;
+  transform: scale(1);
+}
+
+nav li::before {
+  content: "";
+  width: 100%;
+  background-color: white;
+  height: 3px;
+  transition: 200ms cubic-bezier(0.16, 0.95, 0.71, 1.02);
+  transform: scaleX(0);
+  transform-origin: left;
+  position: absolute;
+  bottom: -3px;
+  border-radius: 2px;
+}
+
+nav li:hover::before {
+  transform: scaleX(1);
+}
+
+nav img {
+  width: 35px;
+}
+
+nav li:hover {
+  transform: scale(1.15);
+}
+
+.hasslyLabel {
+  font-family: var(--logo-fontFamily);
+  font-size: 38px;
+  height: fit-content;
+}
+
+.searchScreen {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  /* height: 450px; */
+  z-index: 1;
+  transition: transform 350ms ease-in-out;
+  transform: translateY(-100%);
+  padding-top: 60px;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+.closeButton {
+  display: none;
+}
+.searchInputBox {
+  width: 55%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0px 0px 4px 2px black;
+}
+
+.searchInput {
+  width: 88%;
+  height: 40px;
+  font-family: sans-serif;
+  outline: none;
+  border: none;
+  padding-left: 15px;
+  padding-bottom: 2px;
+  font-size: 20px;
+}
+
+.searchRealButton,
+.filterButton {
+  width: 5%;
+  height: 90%;
+  background-image: url(../icons/magnifying-glass.png);
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  transition: 200ms;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filterButton {
+  background-image: url(../icons/filter.png);
+}
+
+.filterButton:hover,
+.searchRealButton:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+.fakeBar {
+  width: 2%;
+  height: 100%;
+}
+
+.queryBox {
+  display: flex;
+  transform-origin: top left;
+  flex-direction: column;
+  position: fixed;
+  right: 10px;
+  top: 60px;
+  width: 250px;
+  height: 300px;
+  background-color: var(--suggested-Background);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px black;
+  transform: translateX(110%);
+  transition: 300ms cubic-bezier(0.28, 0.61, 0.41, 1.38);
+  font-size: 15px;
+  color: whitesmoke;
+}
+
+.autocompleteBox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  width: 55%;
+  background-color: white;
+  border-radius: 7px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 7px;
+  box-shadow: 0px 0px 5px 0px black;
+}
+
+.autocompleteBox > li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  padding-left: 12px;
+  background-color: white;
+  transition: 200ms;
+  cursor: pointer;
+  animation: fadeIn 500ms ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.autocompleteBox li:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+.queryBox input,
+.inputDiv {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border: solid 1px grey;
+  padding-left: 5px;
+  height: 22px;
+  color: black;
+}
+
+.queryBox input:focus {
+  border: solid 1px black;
+}
+
+.maxPrice,
+.minPrice {
+  width: 70px;
+}
+.priceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: solid 1px whitesmoke;
+}
+.priceLabel {
+  margin-top: 2px;
+  width: 100%;
+  text-align: center;
+}
+.maxPriceBox,
+.minPriceBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  align-items: center;
+}
+
+.maxPriceBox {
+  margin-bottom: 5px;
+}
+
+.conditionBox,
+.shippingBox {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-bottom: solid 1px whitesmoke;
+}
+.shippingBox {
+  flex-direction: column;
+}
+
+.inputDiv {
+  width: 100px;
+  height: 20px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.conditionInput {
+  width: 70px;
+  height: 20px;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.conditionSelection {
+  transition: 200ms;
+  text-align: center;
+  background-color: white;
+  width: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px black;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0) rotate(90deg);
+  transform-origin: center;
+  color: black;
+}
+
+.conditionSelection > li:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+button {
+  color: white;
+  cursor: pointer;
+  width: 70px;
+  margin: none;
+  border: none;
+}
+.closeQueryButton {
+  margin: auto;
+  height: 40px;
+  transition: 100ms;
+  background-color: var(--suggested-Background);
+  color: whitesmoke;
+}
+
+.closeQueryButton:hover {
+  background-color: #e43166;
+}
+
+.latestBlock {
+  width: 90%;
+  height: 350px;
+  margin: auto;
+  margin-top: 25px;
+  background-color: var(--latestBlock-background);
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 100ms ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+  .latestBlock {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+.latestLabel {
+  color: whitesmoke;
+  margin-left: 25px;
+  font-size: 25px;
+  font-family: var(--navBar-fontFamily);
+  height: 30px;
+  padding-top: 5px;
+}
+
+.showings {
+  background-color: var(--secondary-color);
+  height: 320px;
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+  overflow: auto;
+  /* display: flex;
+  flex-direction: row; */
+  white-space: nowrap;
+  gap: 5px;
+}
+
+.itemBox {
+  margin: auto;
+  background-color: #1a1a1d;
+  height: 100%;
+  width: 230px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 200ms ease-out;
+  display: inline-block;
+}
+
+.itemBoxFlex {
+  background-color: #1a1a1d;
+  padding: 6px;
+  height: 100%;
+  width: 230px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.itemBoxPicture {
+  width: 100%;
+  height: 68%;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.itemBoxImg {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+.itemBoxTitle {
+  text-align: left;
+  padding-top: 3px;
+  max-height: 30%;
+  max-width: 230px;
+  color: whitesmoke;
+  white-space: normal;
+}
+
+.itemBoxPrice {
+  color: whitesmoke;
+  width: 100%;
+  text-align: right;
+  margin-top: auto;
+}
+
+::-webkit-scrollbar {
+  background-color: #4e4e50;
+  width: 12px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBar-color);
+}
+
+.itemBox:hover {
+  opacity: 0.7;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.categoryBox {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px white;
+}
+
+input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-left: 10px;
+}
+
+.toastMessage {
+  background-color: var(--navbar-color);
+  position: fixed;
+  min-width: 200px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 35px;
+  bottom: -41px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 40px;
+  opacity: 1;
+  transition: 350ms cubic-bezier(0.61, 1.41, 0.79, 1.38);
+  left: 50%;
+  transform: translateX(-50%);
+  color: whitesmoke;
+}

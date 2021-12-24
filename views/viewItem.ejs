@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=result.title%></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/styles/styles.css" />
+    <link rel="stylesheet" href="../public/assets/styles/results.css" />
+    <link rel="stylesheet" href="../public/assets/styles/view.css" />
+  </head>
+  <body>
+    <%-include('./partials/navbar.ejs') %>
+
+    <div class="searchResultBox">
+      <div
+        class="searchResultImage"
+        style="background-image: url('<%=result.imageUrl%>')"
+      ></div>
+      <div class="searchResultDescriptionBox">
+        <div class="searchResultTitle">
+          <div class="searchTitle"><%=result.title%></div>
+          <div class="searchCategory"></div>
+        </div>
+        <div class="searchResultDes"><%=result.description %></div>
+        <div class="resultPricingAndShippingBox">
+          <div class="pricingResult">Price: $<%=result.price %></div>
+          <div class="brandResult">Brand: <%=result.brand %></div>
+          <div class="conditionResult">Condition: <%=result.condition %></div>
+          <div class="shippingResult">Shipping: $<%=result.shipping %></div>
+        </div>
+        <div class="categoriesBox">
+          Categories: <% for( let i = 0; i < result.tags.length; i++ ) {
+          %><%=result.tags[i] + ', ' %> <% } %>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../public/assets/scripts/style.js"></script>
+    <script type="module" src="../public/assets/scripts/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= searchVal%></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/styles/styles.css" />
+    <link rel="stylesheet" href="../public/assets/styles/results.css" />
+  </head>
+  <body>
+    <%- include('./partials/navbar.ejs')%>
+
+    <div class="filterInfoBox">
+      <div class="filterInfoMinPrice">
+        <% if (filters.minPrice != '' && filters.minPrice != null) { %>
+        <%='Minimum Price: ' + filters.minPrice %> <% }else if(filters.minPrice
+        == null && filters.maxPrice == null&& filters.maxShip == null&&
+        filters.brand == null&& filters.category == null){ %><%='No filters'%><%
+        } %>
+      </div>
+      <div class="filterInfoMaxPrice">
+        <% if (filters.maxPrice != '' && filters.maxPrice != null) { %>
+        <%='Maximum Price: ' + filters.maxPrice %> <% } %>
+      </div>
+      <div class="filterInfoMaxShipping">
+        <% if (filters.maxShip != '' && filters.maxShip != null) { %>
+        <%='Maximum Shipping Price: ' + filters.maxShip %> <% } %>
+      </div>
+      <div class="filterInfoBrand">
+        <% if (filters.brand != '' && filters.brand != null) { %> <%='Brand: ' +
+        filters.brand %> <% } %>
+      </div>
+      <div class="filterInfoCategory">
+        <% if (filters.category != '' && filters.category != null) { %>
+        <%='Category: ' + filters.category %> <% } %>
+      </div>
+    </div>
+
+    <% for( let i = 0; i < result.length; i++ ) { %>
+    <a class="searchResultBox" href="view/<%=result[i]._id%>">
+      <div
+        class="searchResultImage"
+        style="background-image: url('<%=result[i].imageUrl%>')"
+      ></div>
+      <div class="searchResultDescriptionBox">
+        <div class="searchResultTitle">
+          <div class="searchTitle"><%=result[i].title %></div>
+          <div class="searchCategory"></div>
+        </div>
+        <div class="searchResultDes"><%=result[i].description%></div>
+        <div class="resultPricingAndShippingBox">
+          <div class="pricingResult">Price: $<%=result[i].price %></div>
+          <div class="brandResult">Brand: <%=result[i].brand %></div>
+          <div class="shippingResult">Shipping: $<%=result[i].shipping %></div>
+        </div>
+      </div>
+    </a>
+    <% } %>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../public/assets/scripts/style.js"></script>
+    <script type="module" src="../public/assets/scripts/home.js"></script>
+  </body>
+</html>

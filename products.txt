@@ -1,0 +1,99 @@
+1. Title: Football boots
+Categories: Nike,Shoes,Football,Boots,
+
+2. Title: Adidas Football boots
+Categories: Football,Sports,Adidas,Shoes,Soccer,
+
+3. Title: Iphone 12 Pro
+Categories: Smartphone,Iphone,Electronics,Technology,Phone,
+
+4. Title: Apple pencil
+Categories: Pencil,Electronics,Technology,
+
+5. Title: Panasonic ErgoFit In-Ear Earbud
+Categories: Earphones,Electronics,Technology,Audio,
+
+6. Title: SAMSUNG Galaxy Buds 2
+Categories: Earphones,Electronics,Technology,Audio,
+
+7. Title: Badminton Racquets Set
+Categories: Sports,Family,Recreation,Games,
+
+8. Title: Magnetic Chess Set
+Categories: Table Games,Family,Recreation,Games,Strategy,
+
+9. Title: Monopoly Banking Board Game
+Categories: Table Games,Family,Recreation,Games,Strategy,
+
+10. Title: Soccer Ball
+Categories: Sports,Recreation,Balls,Football,
+
+11. Title: Football Receiver Gloves
+Categories: Sports,Recreation,Gloves,Football,Wearables,
+
+12. Title: Grand Theft Auto V Premium Edition, GTA
+Categories: Video Games,Recreation,Games,
+
+13. Title: Playstation DualSense Wireless Controller
+Categories: Video Games,Recreation,Games,Consoles,Ps5,playstation,
+
+14. Title: FIFA 22
+Categories: Video Games,Games,fifa,
+
+15. Title: Xbox Series S
+Categories: Technology,Electronics,Games,
+
+16. Title: Stand Mixer
+Categories: Kitchen,Utility,
+
+17. Title: Kitchen Knife
+Categories: Kitchen,Utility,Knives,
+
+18. Title: TUO Chef knife
+Categories: Kitchen,Utility,Knives,cuisine,
+
+19. Title: Knife Sets 21 Piece
+Categories: Kitchen,Utility,Knives,cuisine,
+
+20. Title: Kitchen Utensil Set Stainless Steel
+Categories: Kitchen,Utility,Accessories,cuisine,
+
+21. Title: Sweatpants for men
+Categories: clothing,fashion,
+
+22. Title:  Infant Baby Girl Clothes
+Categories: clothing,baby,sweatshirts,
+
+23. Title: Sweatshirts for Women
+Categories: clothing,women,sweatshirts,fashions,
+
+24. Title: Polo Shirt
+Categories: clothing,men,polo shirt,clothes,fashion,
+
+25. Title: Samsung Galaxy S21
+Categories: Phone,Technology,Electronics,
+
+26. Title: Nike Air Force 1 
+Categories: Shoes,Fashion,Wearables,
+
+27. Title: Pullover Hoodie
+Categories: Clothes,Fashion,Teens,clothing,
+
+28. Title: Necklace pendant
+Categories: Jewelry,Fashion,Wearables,
+
+29. Title: Necklace Box Chain
+Categories: Jewelry,Necklace,Wearable,Fashion,
+
+30. Title: Shoes Cactus Jack
+Categories: Wearables,Shoes,,
+
+31. Title: Apple Watch Series 6
+Categories: Wearables,Watches,Electronics,Technology,,
+
+32. Title: Cap Hat
+Categories: clothing,wearables,fashion,hats,
+
+33. Title: Playstation 4 
+Categories: consoles,games,recreation,
+

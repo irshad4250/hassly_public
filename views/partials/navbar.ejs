@@ -1,0 +1,58 @@
+<nav>
+  <div class="hasslyLabel">hassly</div>
+  <ul>
+    <li><a class="searchli">Search</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/new-item">Add Item</a></li>
+  </ul>
+</nav>
+
+<div class="searchScreen">
+  <div class="searchInputBox">
+    <input type="text" class="searchInput" placeholder="Search" />
+    <div class="filterButton"></div>
+    <div class="queryBox">
+      <div class="priceBox">
+        <div class="priceLabel">Price</div>
+
+        <div class="minPriceBox">
+          <label for="minPrice">Min.Price:</label>
+          <input type="number" class="minPrice" name="minPrice" />
+        </div>
+        <div class="maxPriceBox">
+          <label for="maxPrice">Max.Price:</label>
+          <input type="number" class="maxPrice" name="maxPrice" />
+        </div>
+      </div>
+
+      <div class="conditionBox">
+        <div class="conditionLabel">Condition:</div>
+        <div class="conditionInput inputDiv">Any</div>
+        <ul class="conditionSelection">
+          <li>Any</li>
+          <li>New</li>
+          <li>Used</li>
+        </ul>
+      </div>
+      <div class="shippingBox">
+        <div class="shippingLabel">Shipping Max Price:</div>
+        <input type="number" class="maxShippingInput" />
+      </div>
+      <div class="shippingBox">
+        <div class="shippingLabel">Brand</div>
+        <input type="text" class="brandInput" />
+      </div>
+      <div class="categoryBox">
+        <div class="shippingLabel">Search by category:</div>
+        <input type="checkbox" class="categoryInput" />
+      </div>
+
+      <button class="closeQueryButton">Close</button>
+    </div>
+    <div class="searchRealButton"></div>
+    <div class="fakeBar"></div>
+  </div>
+  <ul class="autocompleteBox"></ul>
+</div>
+
+<div class="toastMessage"></div>

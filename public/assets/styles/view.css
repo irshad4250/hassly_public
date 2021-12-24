@@ -1,0 +1,31 @@
+.searchResultBox {
+  cursor: default;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 70%;
+}
+
+.searchResultImage {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.searchResultDescriptionBox {
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 950px) {
+  .searchResultBox {
+    border-radius: 0;
+    width: 100vw;
+  }
+}
+
+.searchResultBox:hover {
+  opacity: 1;
+}
