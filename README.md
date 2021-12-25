@@ -31,10 +31,9 @@ Next thing the search bar and the filter box
 
 You can enter your filters and if you want to search by category click search by category and use the search for category search itself
 
-Now search demo
-lets search for playstation
+Now search demo,
+lets search for 'playstation',
 You will see autocomplete show up
-![147377351-e92a37b6-9e3b-4955-9316-617c4885b522](https://user-images.githubusercontent.com/93472888/147377472-05219f77-331c-40ea-884f-58819980b3e1.png)
 
 ![Screenshot (8)](https://user-images.githubusercontent.com/93472888/147377182-51926d05-b850-46a2-a485-ade50ec71f1a.png)
 
