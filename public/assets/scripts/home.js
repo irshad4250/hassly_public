@@ -123,7 +123,7 @@ function createUrlSearchQuery(searchValToPut) {
 
   category === false ? (category = "null") : (category = searchValToPut)
 
-  let url = `search?val=${searchValToPut}&minPrice=${minPrice}&maxPrice=${maxPrice}&maxShip=${maxShip}&condition=${choice}&brand=${brand}&category=${category}`
+  let url = `http://localhost:5000/search?val=${searchValToPut}&minPrice=${minPrice}&maxPrice=${maxPrice}&maxShip=${maxShip}&condition=${choice}&brand=${brand}&category=${category}`
 
   return url
 }
