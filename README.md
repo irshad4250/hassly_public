@@ -29,7 +29,7 @@ To get items for the categories section, the forHomeShowing search index is used
 Next thing the search bar and the filter box
 ![Screenshot (6)](https://user-images.githubusercontent.com/93472888/147377141-70dc6c45-b167-42bf-a55e-c84d05e548cd.png)
 
-You can enter your filters and if you want to search by category click search by category and use the search for category search itself
+You can enter your filters and if you want to search by category, click search by category, and use the search bar to type category
 
 Now search demo,
 lets search for 'playstation',
